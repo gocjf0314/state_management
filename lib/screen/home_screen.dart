@@ -4,6 +4,8 @@ import 'package:state_management/screen/auto_dipose_modifier_screen.dart';
 import 'package:state_management/screen/family_modifier_screen.dart';
 import 'package:state_management/screen/future_provider_screen.dart';
 import 'package:state_management/screen/listen_provider_screen.dart';
+import 'package:state_management/screen/provider_screen.dart';
+import 'package:state_management/screen/select_provider_screen.dart';
 import 'package:state_management/screen/state_notifier_provider_screen.dart';
 import 'package:state_management/screen/state_provider_screen.dart';
 import 'package:state_management/screen/stream_provider_screen.dart';
@@ -73,6 +75,20 @@ class HomeScreen extends StatelessWidget {
               ListenProviderScreen(),
             ),
             child: Text('ListenProviderScreen'),
+          ),
+          ElevatedButton(
+            onPressed: () => pushProviderScreen(
+              context,
+              SelectProviderScreen(),
+            ),
+            child: Text('SelectProviderScreen'),
+          ),
+          ElevatedButton(
+            onPressed: () => pushProviderScreen(
+              context,
+              ProviderScreen(),
+            ),
+            child: Text('ProviderScreen'),
           ),
         ],
       ),
