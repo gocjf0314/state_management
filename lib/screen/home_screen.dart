@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:state_management/layout/default_layout.dart';
 import 'package:state_management/screen/auto_dipose_modifier_screen.dart';
+import 'package:state_management/screen/code_generation_screen.dart';
 import 'package:state_management/screen/family_modifier_screen.dart';
 import 'package:state_management/screen/future_provider_screen.dart';
 import 'package:state_management/screen/listen_provider_screen.dart';
@@ -26,6 +27,7 @@ class HomeScreen extends StatelessWidget {
     return DefaultLayout(
       title: 'HomeScreen',
       body: ListView(
+        shrinkWrap: true,
         children: [
           ElevatedButton(
             onPressed: () => pushProviderScreen(
@@ -89,6 +91,13 @@ class HomeScreen extends StatelessWidget {
               ProviderScreen(),
             ),
             child: Text('ProviderScreen'),
+          ),
+          ElevatedButton(
+            onPressed: () => pushProviderScreen(
+              context,
+              CodeGenerationScreen(),
+            ),
+            child: Text('CodeGenerationScreen'),
           ),
         ],
       ),
