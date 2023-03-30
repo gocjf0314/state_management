@@ -28,7 +28,7 @@ class FutureProviderScreen extends ConsumerWidget {
             ),
             error: (err, stack) => Text(err.toString()),
             loading: () => Center(child: CircularProgressIndicator()),
-          )
+          ),
         ],
       ),
     );
